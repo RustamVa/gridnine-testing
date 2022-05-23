@@ -1,9 +1,15 @@
 package com.gridnine.testing.filter;
 
-public abstract class FilterContext {
-    private Filtering filtering;
+import com.gridnine.testing.flight.Flight;
 
-    public void setFiltering(Filtering filtering) {
+public class FilterContext {
+    private final Filtering filtering;
+
+    public FilterContext (Filtering filtering) {
         this.filtering = filtering;
+    }
+
+    public boolean doCheck(Flight flight) {
+        return filtering.checkFlight(flight);
     }
 }
