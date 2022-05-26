@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
-public class MoreThan2hOnGround implements Filtering {
+public class MoreThan2hOnGroundFilter implements Filtering {
     @Override
     public boolean checkFlight(Flight flight) {
         List<Segment> segments = flight.getSegments();

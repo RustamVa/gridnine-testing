@@ -2,7 +2,7 @@ package com.gridnine.testing;
 
 import com.gridnine.testing.filter.filtering_impls.ArrivalBeforeDepartureSegmentsFilter;
 import com.gridnine.testing.filter.filtering_impls.DepartureBeforeCurrentTimeFilter;
-import com.gridnine.testing.filter.filtering_impls.MoreThan2hOnGround;
+import com.gridnine.testing.filter.filtering_impls.MoreThan2hOnGroundFilter;
 import com.gridnine.testing.flight.Flight;
 import com.gridnine.testing.flight.FlightBuilder;
 import com.gridnine.testing.service.FlightsFilterImpl;
@@ -36,7 +36,7 @@ public class Main {
         System.out.println("\n___________________________________________________________________\n");
 
 
-        filteredFlights = flightsFilter.filter(new MoreThan2hOnGround());
+        filteredFlights = flightsFilter.filter(new MoreThan2hOnGroundFilter());
         System.out.println("\nAFTER \"More than 2 hours on ground\" FILTERING" +
                 "\n___________");
         filteredFlights.forEach(System.out::println);
@@ -66,7 +66,7 @@ public class Main {
         System.out.println("\n___________________________________________________________________\n");
 
         flightsFilter = new FlightsFilterImpl(flights);
-        flights = flightsFilter.filter(new MoreThan2hOnGround());
+        flights = flightsFilter.filter(new MoreThan2hOnGroundFilter());
         System.out.println("\nAFTER \"More than 2 hours on ground\" FILTERING" +
                 "\n___________");
         flights.forEach(System.out::println);
